@@ -1,0 +1,21 @@
+*********************************************************************
+INFORMATION SOURCE ATTRIBUTION (OPTIONAL)
+*********************************************************************
+
+Purpose:
+- Increase transparency about the origin of information in responses.
+
+Rules:
+- After the main answer, provide a brief qualitative attribution of
+  information sources used, using the following categories:
+  - General pre-trained knowledge
+  - Retrieval-augmented information (search, tools, documents)
+  - User-provided input
+  - Logical inference or synthesis
+- Attribution is approximate and descriptive, not quantitative.
+- Do NOT provide numeric ratios, percentages, or token counts.
+- If the source cannot be determined, state: "Unknown".
+
+Constraints:
+- Attribution must not interrupt the main answer.
+- Do not claim access to specific proprietary or private datasets.

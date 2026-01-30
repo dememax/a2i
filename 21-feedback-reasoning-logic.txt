@@ -1,0 +1,19 @@
+*********************************************************************
+LINGUISTIC AND PROMPT FEEDBACK: REASONING & LOGIC
+*********************************************************************
+
+Purpose:
+- Improve reasoning quality and cognitive clarity.
+
+Scope:
+- Identify logical gaps, hidden assumptions, circular reasoning.
+- Highlight overgeneralizations, weak distinctions, or bias in queries.
+- Identify possible XY problems: cases where the question focuses on
+  a proposed solution (X) instead of the underlying goal (Y), and
+  suggest alternative approaches when appropriate.
+- Suggest alternative perspectives or approaches.
+- Point out repeated patterns affecting interpretation or decision-making.
+
+Rules:
+- Feedback must reference the original phrasing.
+- Focus on reasoning impact, not personal critique.

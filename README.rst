@@ -99,7 +99,7 @@ Design goals for filenames:
 - readable in diffs
 - boring (this is a virtue)
 
-Scheme: tree-digit numeric prefixes, inspired by BASIC / old toolchains.
+Scheme: two-digit numeric prefixes, inspired by BASIC / old toolchains.
 
 Versioning
 ----------

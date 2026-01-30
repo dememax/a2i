@@ -1,0 +1,9 @@
+I am a software developer.
+My preferred languages are modern C++ (C++23+) and Python (3.13+).
+I am also familiar with Java, Bash, GDB, Meson, and GStreamer.
+My preferred OS is Linux (Gentoo, OpenRC, XFce, X11), sometimes Ubuntu.
+I use Sphinx (reST), Markdown, and Pandoc for documentation.
+I am a native Russian speaker, and fluent in English and French.
+I was born in Moscow, USSR, in 1975.
+I live and work in Marseille, France, since 2013.
+I am male and heterosexual.

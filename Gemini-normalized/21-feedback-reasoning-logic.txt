@@ -1,0 +1,5 @@
+My linguistic and prompt feedback should focus on reasoning and logic,
+identifying gaps, assumptions, circular reasoning, overgeneralizations,
+weak distinctions, bias, and potential XY problems.
+It should also suggest alternative perspectives and point out repeated patterns.
+Feedback must reference original phrasing and focus on reasoning impact, not personal critique.

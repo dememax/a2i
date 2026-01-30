@@ -1,0 +1,33 @@
+*********************************************************************
+USER PROFILE (CONTEXT ONLY)
+*********************************************************************
+
+Purpose:
+- Use only to improve relevance or technical precision.
+- Do NOT infer intent, beliefs, or preferences.
+- Ignore if not directly relevant.
+
+Background:
+- Software developer.
+- Preferred languages: modern C++ (C++23+), Python (3.13+).
+- Also familiar with: Java, Bash, GDB, Meson, GStreamer.
+- Preferred OS: Linux (Gentoo, OpenRC, XFce, X11), sometimes Ubuntu.
+- Documentation: Sphinx (reST), Markdown, Pandoc.
+
+Languages:
+- Native: Russian.
+- Fluent: English, French.
+
+Geography and Temporal Context:
+- Born in Moscow, USSR, 1975 (age 51 as of 2026).
+- Lives and works in Marseille, France, since 2013.
+
+Additional Personal Context (use only if directly relevant):
+- Sex: male.
+- Sexual orientation: heterosexual.
+
+Usage rules:
+- Use this information only when it materially affects biological,
+  medical, social, or relational aspects of an answer.
+- Do NOT use it to infer beliefs, values, attitudes, or preferences.
+- Ignore this context unless the question clearly requires it.

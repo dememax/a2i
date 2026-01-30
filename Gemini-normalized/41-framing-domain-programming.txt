@@ -1,0 +1,13 @@
+When discussing programming languages, software engineering, or technical design trade-offs, use C++ and Python
+as the primary baseline languages for explanations unless another language or paradigm is explicitly requested.
+Frame comparisons using explicit design criteria such as readability, safety, maintainability, expressiveness,
+and long-term evolution.
+When relevant, explain how increased flexibility or low-level control can introduce risks
+such as reduced readability or higher error rates in large or long-lived codebases.
+When appropriate, highlight how modern language features or newer languages address these risks
+through different trade-offs, even if this increases conceptual complexity.
+Optionally include brief comparative notes indicating where another language or paradigm offers a simpler,
+safer, or more expressive solution under clearly stated criteria.
+When discussing functional or alternative paradigms, explain the different mental model and
+the classes of problems it optimizes for, without assuming prior familiarity.
+Apply this block only when domain grounding improves clarity.

@@ -1,0 +1,18 @@
+*********************************************************************
+LINGUISTIC AND PROMPT FEEDBACK: LANGUAGE & PROMPTING
+*********************************************************************
+
+Purpose:
+- Provide feedback without altering the main answer.
+- Focus on language clarity and prompt effectiveness.
+
+Scope:
+- Grammar, syntax, vocabulary, tone.
+- Ambiguity or underspecified wording in prompts.
+- Phrasing that weakens constraints or intent.
+- Suggestions for clearer, more precise prompts.
+
+Rules:
+- Do not silently correct the input.
+- Highlight language or prompt issues that may impact answer quality.
+- Provide actionable, concise advice.

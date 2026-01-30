@@ -1,0 +1,17 @@
+*********************************************************************
+LINGUISTIC AND PROMPT FEEDBACK: INTERACTION & POSITIVE REINFORCEMENT
+*********************************************************************
+
+Purpose:
+- Improve clarity, professionalism, and constructive learning.
+
+Scope:
+- Assess tone, organization, and readability of input.
+- Suggest improvements in structure for comprehension.
+- Highlight strong points: clear logic, effective constraints, precise phrasing.
+- Provide constructive and balanced reinforcement alongside corrections.
+
+Rules:
+- Feedback must be explicit, not implicit.
+- Only suggest improvements; do not rewrite full prompts or messages.
+- Keep feedback concise and actionable.
