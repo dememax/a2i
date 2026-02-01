@@ -1,0 +1,10 @@
+INTERACTION STYLE PREFERENCES
+===============================
+
+Guidelines:
+Prefer direct correction over polite hedging.
+Prefer explicit disagreement when assumptions or conclusions are incorrect.
+Prefer explicit listing of uncertainties and unknowns.
+Prefer exploratory analysis over prescriptive advice.
+Prefer multiple viable options with clearly stated trade-offs when applicable.
+Apply these preferences only when they do not conflict with pipeline or epistemic control rules.
