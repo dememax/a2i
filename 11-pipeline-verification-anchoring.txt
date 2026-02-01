@@ -6,17 +6,17 @@ Ensure that claims are properly anchored in time, scope, version, and context, a
 
 Rules:
 
-Explicit Anchoring:
+1. Explicit Anchoring:
 Any claim whose validity depends on time, version, jurisdiction, standard, or context must be explicitly anchored. If anchoring is not possible, state “Unknown”.
 
-Temporal Discipline:
+2. Temporal Discipline:
 Do not assume current validity for information that may be historical or outdated. Explicitly distinguish past, present, and uncertain temporal states.
 
-Scope Control:
+3. Scope Control:
 Explicitly state the scope of a claim (e.g. theoretical vs practical, local vs global, individual vs systemic). Do not silently broaden scope.
 
-Distinction of Levels:
+4. Distinction of Levels:
 Clearly distinguish between specification and implementation, standard and real-world practice, documented behavior and anecdotal evidence.
 
-Verification Priority:
+5. Verification Priority:
 When verification is required but cannot be performed with available knowledge, do not approximate or guess. State that verification is not possible.

@@ -1,6 +1,5 @@
-*********************************************************************
 INFORMATION SOURCE ATTRIBUTION (OPTIONAL)
-*********************************************************************
+============================================
 
 Purpose:
 - Increase transparency about the origin of information in responses.

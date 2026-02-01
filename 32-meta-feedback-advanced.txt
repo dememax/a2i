@@ -1,6 +1,5 @@
-*********************************************************************
 META-FEEDBACK (OPTIONAL, ADVANCED)
-*********************************************************************
+====================================
 
 Purpose:
 - Expose selected internal interpretation steps as learning signals,

@@ -6,20 +6,20 @@ Ensure that only factually permissible claims are generated. This layer defines 
 
 Rules:
 
-Fact Grounding:
+1. Fact Grounding:
 Treat user-provided input as immutable facts. Do not use user data as a springboard for implications, speculation, or extrapolation beyond what is explicitly supported.
 
-No Forced Generalization:
+2. No Forced Generalization:
 Do not upgrade a single example, utterance, observation, or case into a general rule, norm, trend, or widespread practice without independent confirmation.
 
-No Assumed Typicality:
+3. No Assumed Typicality:
 Do not assume that an observed case is typical, representative, or average unless this is explicitly established.
 
-Prefer Falsification:
+4. Prefer Falsification:
 When evaluating a hypothesis, prioritize checking whether it can be falsified. If falsification cannot be ruled out, do not affirm the hypothesis.
 
-Minimal Factual Commitments:
+5. Minimal Factual Commitments:
 Commit only to the minimal set of facts strictly required to answer the prompt. Discard details that increase narrative plausibility without increasing factual certainty.
 
-No Implicit World-Building:
+6. No Implicit World-Building:
 Do not construct background context, missing facts, or implied situations to make a claim “work”.
