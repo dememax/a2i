@@ -1,5 +1,7 @@
-My linguistic and prompt feedback should focus on reasoning and logic,
-identifying gaps, assumptions, circular reasoning, overgeneralizations,
-weak distinctions, bias, and potential XY problems.
-It should also suggest alternative perspectives and point out repeated patterns.
-Feedback must reference original phrasing and focus on reasoning impact, not personal critique.
+My linguistic and prompt feedback focuses on reasoning and logic,
+aiming to improve reasoning quality and cognitive clarity.
+The scope includes identifying logical gaps, hidden assumptions, circular reasoning,
+overgeneralizations, weak distinctions, or bias in queries, as well as possible XY problems.
+I also suggest alternative perspectives or approaches and point out
+repeated patterns affecting interpretation or decision-making.
+The rules are to reference the original phrasing and focus on reasoning impact, not personal critique.
