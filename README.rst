@@ -10,6 +10,9 @@ Epistemically Safe Instruction Architecture
    :depth: 3
    :local:
 
+Overview
+--------
+
 This repository contains a structured set of AI instructions designed for
 **analysis of complex, human-driven conversations and ideas**, where
 *truth, meaning, and uncertainty* must all be preserved.
@@ -26,26 +29,37 @@ Design Principles
 -----------------
 
 The architecture is intentionally layered. Each layer protects against
-a different class of failure.
+a different class of failure and has a clearly defined responsibility.
 
-1. **Data Integrity (Pipeline Constraints)**  
-   Prevents factual hallucinations, invented sources, and unjustified
-   generalization. This layer answers the question: *“Is this claim allowed
-   to exist at all?”*
+1. **Pipeline Constraints (Data Integrity & Reasoning Discipline)**  
+   Prevent factual hallucinations, invented sources, unjustified
+   generalization, and invalid inference steps.  
+   This layer answers the question: *“Is this claim allowed to exist as a fact or inference at all?”*
 
 2. **Epistemic Control (Right-to-Generate Constraints)**  
-   Enforces explicit stopping conditions. If the origin, mechanism, or
-   justification of a claim cannot be traced to user input or verifiable
-   pre-trained knowledge, the model must stop and say so.
-   Silence or refusal is preferred over plausible fabrication.
+   Enforces explicit stopping conditions. If the origin, mechanism,
+   justification, or internal rationale of a claim cannot be traced to
+   user input or verifiable pre-trained knowledge, generation must stop.  
+   Silence or explicit declaration of “Unknown” is preferred over
+   plausible fabrication.
 
-3. **Interpretation & Framing Constraints**  
-   Governs *how* valid information is explained: preserving stress cases,
-   attribution (who said what to whom), user-significant exceptions,
-   and the difference between local behavior and stable traits.
+3. **Output Interface Contract**  
+   Governs *how* responses are expressed: language, tone, terminology,
+   and structural clarity. This layer ensures that even correct content
+   is not presented in a misleading or manipulative way.
 
-These layers are orthogonal. They do not duplicate each other and should
-not be collapsed into a single rule set.
+4. **Interpretation & Framing Constraints**  
+   Govern *how* valid information is interpreted and explained:
+   preserving stress cases, attribution (who said what to whom),
+   user-significant exceptions, and the distinction between local behavior
+   and stable traits.
+
+5. **Interaction Style Preferences (Optional)**  
+   Control interaction style (directness, disagreement, uncertainty
+   listing) without affecting epistemic correctness.
+
+These layers are orthogonal. They do not duplicate each other and must not
+be collapsed into a single rule set.
 
 What This Is Not
 ----------------
@@ -86,10 +100,11 @@ Instructions are split into independent blocks, each stored as a separate file.
 Blocks are indexed to allow insertion of new constraints without renaming
 existing files, preserving history and diffs.
 
-See individual files for details.
+Numeric prefixes encode both **grouping** and **injection order**:
+lower-numbered blocks must be applied before higher-numbered ones.
 
-File naming scheme
----------------------
+File Naming Scheme
+------------------
 
 Design goals for filenames:
 
@@ -99,36 +114,40 @@ Design goals for filenames:
 - readable in diffs
 - boring (this is a virtue)
 
-Scheme: two-digit numeric prefixes, inspired by BASIC / old toolchains.
+Scheme: two-digit numeric prefixes inspired by BASIC / early toolchains.
+
+Canonical ranges:
+
+- 00–09:  Reserved / bootstrap (empty)
+- 10–19: Core Pipeline (data integrity & reasoning discipline)
+- 20–29: Epistemic Control (right to generate)
+- 30–39: Output Interface Contract
+- 40–49: Feedback & Prompt Analysis
+- 50–59: User & Context Blocks
+- 60–69: Framing (general interpretation)
+- 70–79: Framing (domain-specific)
+- 80–89: Interaction Style Preferences
 
 Versioning
 ----------
 
 The repository maintains explicit versions of the instruction set.
-Changes should be additive where possible, and breaking conceptual changes
-should result in a new major version.
-
-Rationale
----------
-
-Most AI failures in analytical conversations are not caused by lack of
-knowledge, but by *unauthorized explanation*.
-
-This architecture treats explanation as a privilege, not a default.
+Changes should be additive where possible.
+Breaking conceptual changes require a new major version.
 
 Customization and Scope
 -----------------------
 
-This instruction set includes optional, user-specific blocks reflecting
-individual analytical preferences and working style.
+This instruction set includes optional, user-specific context blocks
+reflecting individual analytical preferences or operational background.
 
-At present, one such optional block is tailored for **Maxim Dementyev** and
-encodes preferences observed in long-form analytical dialogue
-(e.g. emphasis on epistemic rigor, explicit attribution, stress cases,
-and resistance to smoothing or premature abstraction).
+At present, optional blocks are provided for **Maxim Dementyev**, including:
 
-These user-specific blocks are strictly optional. The core architecture
-remains valid and useful without them.
+- personal analytical preferences,
+- business and operational context for B2B, legal, and financial discussions.
+
+These blocks are strictly optional. The core architecture remains valid
+and useful without them.
 
 AI-Agnostic Design
 ------------------
@@ -145,6 +164,71 @@ This allows the same instruction set to be applied, with minimal adaptation,
 to different systems (e.g. ChatGPT, Gemini, or other LLMs), while preserving
 the same epistemic guarantees.
 
+Instruction Block Constraints
+-----------------------------
+
+All instruction blocks in this repository are intentionally constrained
+to maximize portability, predictability, and compatibility across
+different AI platforms.
+
+The following constraints are **design requirements**, not incidental
+limitations.
+
+Block Size Limits
+~~~~~~~~~~~~~~~~~
+
+- Individual instruction blocks are generally kept **at or below
+  approximately 1500 characters**.
+- This reflects known platform limits:
+  - Gemini instruction block size constraints.
+  - ChatGPT personal instruction and session-injection limits.
+- Architectural assumptions must not rely on longer blocks or implicit
+  cross-block memory.
+
+Formatting Discipline
+~~~~~~~~~~~~~~~~~~~~~
+
+- Instruction blocks avoid advanced or fragile formatting.
+- Only minimal, robust constructs are used:
+  - plain text
+  - simple lists
+  - section headers
+  - capitalization for emphasis
+  - quotation marks where necessary
+
+This is intentional. Many platforms normalize, flatten, or partially
+strip formatting during storage or execution. Instruction semantics
+must survive such normalization without loss of meaning.
+
+Language and Style Normalization
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+- Instruction blocks are written in **neutral, technical English**.
+- The style is optimized for **machine interpretation**, not rhetorical
+  effect or human persuasion.
+- Language choices favor:
+  - clarity over expressiveness,
+  - explicit constraints over implied intent,
+  - descriptive precision over idiomatic richness.
+
+Where relevant, an STE-like (Simplified Technical English–style) approach
+is used: short sentences, active voice, and limited syntactic complexity.
+This is a stylistic discipline, not strict adherence to a controlled
+vocabulary standard.
+
+AI-Agnostic Intent
+~~~~~~~~~~~~~~~~~~
+
+These constraints ensure that instruction blocks:
+
+- do not depend on hidden formatting channels,
+- do not assume platform-specific parsing behavior,
+- remain semantically stable under normalization or rephrasing,
+- can be reused, reordered, or injected independently.
+
+Together, these properties are essential for treating instructions as
+**portable architectural components**, rather than fragile prompts.
+
 Model-Specific Constraints and Normalization
 --------------------------------------------
 
@@ -155,11 +239,9 @@ most notably:
   no advanced formatting).
 - ChatGPT personal instruction limits and session-level injection patterns.
 
-As a result:
-
-- Each block is self-contained and length-bounded.
-- Blocks can be saved, injected, or reordered without semantic dependency
-  on formatting or markup.
+Blocks may be internally normalized or rephrased by platforms during
+storage. Such normalized versions are execution artifacts and must not
+be treated as canonical specifications.
 
 Usage with ChatGPT and Gemini
 -----------------------------

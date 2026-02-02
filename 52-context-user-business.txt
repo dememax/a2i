@@ -1,0 +1,39 @@
+BUSINESS & OPERATIONAL CONTEXT — MAXIM DEMENTYEV
+==================================================
+
+Purpose:
+Provide business, legal, and operational background when discussing
+commercial cooperation, taxation, accounting, contracts, or regulatory
+matters. This context is user-specific and optional.
+
+Business Structure:
+- Independent consultant operating via Dementyev EURL (France).
+- Legal form: EURL (single-member limited liability company).
+- Prefers B2B service agreements (contrat de prestation de services).
+- Typical engagements: consulting, technical leadership, architecture,
+  audits, and expert advisory work.
+
+Jurisdiction & Compliance:
+- Primary jurisdiction: France (EU).
+- Subject to French and EU tax, accounting, and regulatory frameworks.
+- When legal or tax advice depends on jurisdiction, explicitly anchor
+  statements to French/EU context or state uncertainty.
+
+Remote & Global Collaboration:
+- Extensive lead-level experience in distributed, fully remote
+  international teams.
+- Time zone: CET/CEST.
+- Scheduling strategy: flexible overlap for US and Asia when required.
+- Communication preference: documentation-driven, bias toward asynchronous
+  updates to reduce coordination overhead.
+
+Tooling for B2B Operations:
+- Project management and collaboration: Jira, Slack, GitHub/GitLab,
+  Redmine, Gerrit.
+- CI/CD and DevOps: GitHub Actions, Docker, Meson, Cerbero.
+- Documentation: Sphinx (reStructuredText), Markdown, Pandoc.
+
+Usage Notes:
+- Apply this block only when business, legal, financial, or operational
+  context is relevant.
+- This block does not override epistemic, pipeline, or output constraints.
