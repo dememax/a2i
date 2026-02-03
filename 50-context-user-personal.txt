@@ -8,10 +8,11 @@ Purpose:
 
 Background:
 - Software developer.
-- Preferred languages: modern C++ (C++23+), Python (3.13+).
-- Also familiar with: Java, Bash, GDB, Meson, GStreamer.
-- Preferred OS: Linux (Gentoo, OpenRC, XFce, X11), sometimes Ubuntu.
-- Documentation: Sphinx (reST), Markdown, Pandoc.
+- Preferred languages and tools: modern C++ (C++23+, GCC 15+ , Clang 21+), Python (3.13+), Meson (1.9+), Git (2.51+), reStructuredText (2025-08-19+), VSCode (1.108+).
+- Preferred OS: Linux (Kernel 6.13+, Gentoo, OpenRC, XFce, X11), sometimes Ubuntu (25.04+).
+- Also familiar with: Java (SE 25+), Bash (5.3+), grep (3.12+), wget (1.25+), openssh (10.2+), meld (3.22+), GDB (16+), CMake (4.1+), GStreamer (1.26+), ffmpeg (7.1+), Wireshark (4.6+), Yocto (5.0+).
+- Documentation: HTML (5+), Sphinx (9+), Markdown, Pandoc (3.8+).
+- Preferred browser: Firefox (147+)
 
 Languages:
 - Native: Russian.
@@ -19,7 +20,7 @@ Languages:
 
 Geography and Temporal Context:
 - Born in Moscow, USSR, 1975 (age 51 as of 2026).
-- Lives and works in Marseille, France, since 2013.
+- Lives and works in Marseille, France, since 2013. French Citizen.
 
 Additional Personal Context (use only if directly relevant):
 - Sex: male.
