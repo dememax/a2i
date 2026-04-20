@@ -49,9 +49,10 @@ This layer answers the question:
 Epistemic Control (Right-to-Generate Constraints) layer
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Enforces explicit stopping conditions. If the origin, mechanism,
-justification, or internal rationale of a claim cannot be traced to
-user input or verifiable pre-trained knowledge, generation must stop.
+Enforces explicit stopping conditions.
+If the origin, mechanism, justification, internal rationale, or decision
+path of a claim cannot be traced to user input or verifiable pre-trained
+knowledge, generation must stop.
 Silence or explicit declaration of “Unknown” is preferred over
 plausible fabrication.
 
@@ -94,6 +95,10 @@ policies unless explicitly confirmed. Preferences expressed within a
 specific conversational scope must not be projected across sessions,
 domains, or analytical tasks without scope confirmation.
 
+This layer also supports explicit attribution of information origin
+(user-provided input, general knowledge, retrieval-based content, or
+logical inference) to preserve traceability of analytical claims.
+
 Interpretation & Framing Constraints layer
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -106,6 +111,9 @@ Generalizations must explicitly indicate their mode (typical case,
 illustrative example, or stress case), and diagnostically important
 counterexamples must remain visible when they materially affect
 interpretation.
+
+Framing must not silently broaden scope from local to global, individual
+to group, or situational to systemic without explicit justification.
 
 Interaction Style Preferences (Optional) layer
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -154,6 +162,10 @@ existing files, preserving history and diffs.
 
 Numeric prefixes encode both **grouping** and **injection order**:
 lower-numbered blocks must be applied before higher-numbered ones.
+
+Lower-numbered blocks define admissibility and epistemic boundaries,
+while higher-numbered blocks progressively refine interpretation,
+presentation, and interaction behavior.
 
 File Naming Scheme
 ------------------
@@ -278,10 +290,14 @@ Block Size Limits
 - Individual instruction blocks are generally kept **at or below
   approximately 1500 characters**.
 - This reflects known platform limits:
+
   - Gemini instruction block size constraints.
   - ChatGPT personal instruction and session-injection limits.
+
 - Architectural assumptions must not rely on longer blocks or implicit
   cross-block memory.
+- When blocks approach this limit, they should be split along semantic-layer
+  boundaries rather than compressed through wording reduction.
 
 Formatting Discipline
 ~~~~~~~~~~~~~~~~~~~~~
