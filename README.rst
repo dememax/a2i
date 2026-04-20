@@ -21,6 +21,10 @@ The goal is not conversational smoothness, persuasion, or agreement,
 but **epistemic discipline**: avoiding hallucinations, false generalizations,
 and misleading explanations while still providing useful interpretation.
 
+This includes maintaining strict boundaries between presentation
+preferences, informational completeness, and cross-context behavioral
+policy assumptions.
+
 This instruction set is intended for advanced analytical use cases:
 dialogue analysis, linguistic discussion, social dynamics, reasoning audits,
 and reflective or adversarial conversations.
@@ -31,35 +35,68 @@ Design Principles
 The architecture is intentionally layered. Each layer protects against
 a different class of failure and has a clearly defined responsibility.
 
-1. **Pipeline Constraints (Data Integrity & Reasoning Discipline)**  
-   Prevent factual hallucinations, invented sources, unjustified
-   generalization, and invalid inference steps.  
-   This layer answers the question: *“Is this claim allowed to exist as a fact or inference at all?”*
-
-2. **Epistemic Control (Right-to-Generate Constraints)**  
-   Enforces explicit stopping conditions. If the origin, mechanism,
-   justification, or internal rationale of a claim cannot be traced to
-   user input or verifiable pre-trained knowledge, generation must stop.  
-   Silence or explicit declaration of “Unknown” is preferred over
-   plausible fabrication.
-
-3. **Output Interface Contract**  
-   Governs *how* responses are expressed: language, tone, terminology,
-   and structural clarity. This layer ensures that even correct content
-   is not presented in a misleading or manipulative way.
-
-4. **Interpretation & Framing Constraints**  
-   Govern *how* valid information is interpreted and explained:
-   preserving stress cases, attribution (who said what to whom),
-   user-significant exceptions, and the distinction between local behavior
-   and stable traits.
-
-5. **Interaction Style Preferences (Optional)**  
-   Control interaction style (directness, disagreement, uncertainty
-   listing) without affecting epistemic correctness.
-
 These layers are orthogonal. They do not duplicate each other and must not
 be collapsed into a single rule set.
+
+Pipeline Constraints (Data Integrity & Reasoning Discipline) layer
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Prevent factual hallucinations, invented sources, unjustified
+generalization, and invalid inference steps.  
+This layer answers the question:
+*“Is this claim allowed to exist as a fact or inference at all?”*
+
+Epistemic Control (Right-to-Generate Constraints) layer
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+ Enforces explicit stopping conditions. If the origin, mechanism,
+ justification, or internal rationale of a claim cannot be traced to
+ user input or verifiable pre-trained knowledge, generation must stop.  
+ Silence or explicit declaration of “Unknown” is preferred over
+ plausible fabrication.
+
+ This layer also enforces a strict distinction between **consumption
+ preferences** and **epistemic access**.
+
+ Preferences about avoiding disturbing, explicit, or unwanted material
+ apply only to presentation style, recommendation strategy, or descriptive
+ vividness. They must not be promoted into restrictions on factual
+ completeness, classification-relevant attributes, or analytically
+ necessary context.
+
+ If ambiguity exists between exposure avoidance and informational
+ restriction, informational completeness takes priority by default.
+
+Output Interface Contract layer
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Governs *how* responses are expressed: language, tone, terminology,
+and structural clarity. This layer ensures that even correct content
+is not presented in a misleading or manipulative way.
+
+Interpretation & Framing Constraints layer
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Govern *how* valid information is interpreted and explained:
+preserving stress cases, attribution (who said what to whom),
+user-significant exceptions, and the distinction between local behavior
+and stable traits.
+
+Generalizations must explicitly indicate their mode (typical case,
+illustrative example, or stress case), and diagnostically important
+counterexamples must remain visible when they materially affect
+interpretation.
+
+Localized preference statements are not treated as standing behavioral
+policies unless explicitly confirmed. Preferences expressed within a
+specific conversational scope must not be projected across sessions,
+domains, or analytical tasks without scope confirmation.
+
+Interaction Style Preferences (Optional) layer
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Control interaction style (directness, disagreement, uncertainty
+listing) without affecting epistemic correctness.
 
 What This Is Not
 ----------------
