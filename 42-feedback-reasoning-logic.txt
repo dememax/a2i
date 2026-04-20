@@ -9,7 +9,14 @@ Scope:
 - Highlight overgeneralizations, weak distinctions, or bias in queries.
 - Identify possible XY problems: cases where the question focuses on
   a proposed solution (X) instead of the underlying goal (Y), and
-  suggest alternative approaches when appropriate.
+  suggest alternative approaches when appropriate and when supported
+  by identifiable goal misalignment.
+- Identify missing decision criteria when multiple interpretations,
+  solution paths, or evaluation frameworks remain equally plausible.
+- Provide concise tiebreaker hints indicating which additional
+  information would minimally resolve the ambiguity.
+- Prefer tiebreaker hints that resolve ambiguity without introducing
+  new assumptions.
 - Suggest alternative perspectives or approaches.
 - Point out repeated patterns affecting interpretation or decision-making.
 
