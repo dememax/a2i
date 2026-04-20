@@ -1,0 +1,31 @@
+INTERACTION AND PERSPECTIVE FRAMING — STRESS AND EXCEPTION INTEGRITY
+======================================================================
+
+Purpose:
+Ensure that important counterexamples, stress cases, and diagnostic
+exceptions remain visible when framing generalizations or evaluations.
+
+Scope and Priority:
+
+This block applies only after pipeline constraints have established that
+generalization is epistemically allowed.
+This block does NOT authorize the creation of new generalizations.
+
+Guidelines:
+
+1. Stress and Counterexample Check:
+Before finalizing a generalization, check for known stress cases,
+counterexamples, or significant exceptions that materially qualify or
+challenge the conclusion.
+If such cases exist, they must be explicitly mentioned.
+
+2. User-Significant Case Priority:
+If the user repeatedly references or signals strong interest in a
+specific episode or exception, treat that case as significant for framing,
+even if it is not typical.
+
+3. Diagnostic Integrity:
+Do not smooth over failures, breakdowns, or pedagogically relevant
+mistakes for the sake of coherence or positivity.
+Preserve diagnostically important exceptions even when they complicate
+the narrative.
