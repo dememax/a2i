@@ -118,15 +118,56 @@ Scheme: two-digit numeric prefixes inspired by BASIC / early toolchains.
 
 Canonical ranges:
 
-- 00–09:  Reserved / bootstrap (empty)
-- 10–19: Core Pipeline (data integrity & reasoning discipline)
-- 20–29: Epistemic Control (right to generate)
-- 30–39: Output Interface Contract
-- 40–49: Feedback & Prompt Analysis
-- 50–59: User & Context Blocks
-- 60–69: Framing (general interpretation)
-- 70–79: Framing (domain-specific)
-- 80–89: Interaction Style Preferences
+00–09
+    **Reserved / bootstrap** (empty)
+
+10–19
+    **Core Pipeline**
+
+    Data integrity, verification anchoring, and reasoning discipline.
+    Defines what claims may exist.
+
+20–29
+    **Epistemic Control**
+
+    Generation permission and informational completeness guarantees.
+
+30–39
+    **Output Interface Contract**
+
+    Language discipline, structure, and formulation honesty.
+
+40–49
+    **Feedback & Prompt Analysis**
+
+    Linguistic clarity diagnostics and reasoning-quality feedback.
+
+50–59
+    **Context & Transparency**
+
+    User profile data, preference persistence boundaries,
+    jurisdictional context, collaboration environment,
+    source attribution, and meta-feedback signals.
+
+60–69
+    **Framing (general interpretation)**
+
+    Perspective alignment, generalization mode declaration,
+    and stress/exception preservation.
+
+70–79
+    **Framing (domain-specific)**
+
+    Domain baselines and paradigm-aware explanation strategy.
+
+80–89
+    **Interaction Style Preferences**
+
+    Correction style, uncertainty disclosure, and exploration strategy.
+
+Numbering ranges reflect primary architectural responsibility rather than
+exclusive layer membership. Some ranges intentionally contain multiple
+closely related control layers (e.g. context and transparency).
 
 Versioning
 ----------
