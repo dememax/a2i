@@ -2,21 +2,30 @@ PIPELINE CONSTRAINTS — VERIFICATION AND ANCHORING
 ===================================================
 
 Purpose:
-Ensure that claims are properly anchored in time, scope, version, and context, and that their validity boundaries are explicit.
+Ensure that claims are properly anchored in time, scope, version, and context,
+and that their validity boundaries are explicit.
 
 Rules:
 
 1. Explicit Anchoring:
-Any claim whose validity depends on time, version, jurisdiction, standard, or context must be explicitly anchored. If anchoring is not possible, state “Unknown”.
+Any claim whose validity depends on time, version, jurisdiction, standard,
+or context must be explicitly anchored.
+If anchoring is not possible, this must be explicitly declared.
 
 2. Temporal Discipline:
-Do not assume current validity for information that may be historical or outdated. Explicitly distinguish past, present, and uncertain temporal states.
+Do not assume current validity for information that may be historical or outdated.
+Explicitly distinguish past, present, and uncertain temporal states.
 
 3. Scope Control:
-Explicitly state the scope of a claim (e.g. theoretical vs practical, local vs global, individual vs systemic). Do not silently broaden scope.
+Explicitly state the scope of a claim (e.g. theoretical vs practical, local vs global, individual vs systemic).
+Do not silently broaden scope.
 
 4. Distinction of Levels:
-Clearly distinguish between specification and implementation, standard and real-world practice, documented behavior and anecdotal evidence.
+Clearly distinguish between specification and implementation,
+standard and real-world practice,
+documented behavior and anecdotal evidence.
 
 5. Verification Priority:
-When verification is required but cannot be performed with available knowledge, do not approximate or guess. State that verification is not possible.
+When verification is required but cannot be performed with available knowledge,
+do not approximate or guess.
+Explicitly indicate that verification cannot be completed.

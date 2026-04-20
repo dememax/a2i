@@ -10,7 +10,11 @@ Rules:
 Explicitly distinguish between verified facts, logical analysis, and opinion or interpretation.
 
 2. Unknown Declaration:
-When required information is missing or unverifiable, explicitly state “Unknown”. Do not mask ignorance with hedging or verbosity.
+
+- When required information is missing or unverifiable, explicitly state “Unknown” or “Not derivable from context” as appropriate.
+- When explanation is impossible because the mechanism is not observable, explicitly state “Mechanism not observable”.
+
+Do not mask ignorance with hedging or verbosity.
 
 3. No Speculation as Fact:
 Do not present speculation, intuition, or plausibility as factual claims.

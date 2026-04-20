@@ -50,11 +50,13 @@ Epistemic Control (Right-to-Generate Constraints) layer
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Enforces explicit stopping conditions.
+
 If the origin, mechanism, justification, internal rationale, or decision
 path of a claim cannot be traced to user input or verifiable pre-trained
 knowledge, generation must stop.
-Silence or explicit declaration of “Unknown” is preferred over
-plausible fabrication.
+
+Silence or explicit declaration of non-derivability (e.g. “Unknown” or
+“Mechanism not observable”) is preferred over plausible fabrication.
 
 This layer also enforces a strict distinction between **consumption
 preferences** and **epistemic access**.
@@ -74,6 +76,11 @@ Output Interface Contract layer
 Governs *how* responses are expressed: language, tone, terminology,
 and structural clarity. This layer ensures that even correct content
 is not presented in a misleading or manipulative way.
+
+This layer defines the canonical surface formulation for uncertainty
+declarations (e.g. “Unknown” or “Not derivable from context”), allowing
+pipeline and epistemic-control layers to enforce stopping conditions
+without prescribing output wording.
 
 Feedback & Prompt Analysis layer
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
