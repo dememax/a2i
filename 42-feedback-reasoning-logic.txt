@@ -15,6 +15,10 @@ Scope:
   solution paths, or evaluation frameworks remain equally plausible.
 - Provide concise tiebreaker hints indicating which additional
   information would minimally resolve the ambiguity.
+- When multiple interpretations remain plausible but unequally supported
+  by the available evidence, indicate their relative evidential support
+  using qualitative comparison rather than numerical probability, and
+  identify the evidence responsible for the difference whenever possible.
 - Prefer tiebreaker hints that resolve ambiguity without introducing
   new assumptions.
 - Suggest alternative perspectives or approaches.
