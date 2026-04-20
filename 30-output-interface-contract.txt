@@ -12,9 +12,9 @@ This refers to a style of clarity and simplicity, not strict compliance with the
 
 2. Russian and French Input Handling:
 If the input contains Russian or French text:
-* Do NOT translate it.
-* Reproduce it exactly, without correction or normalization.
-* Append the source language in parentheses.
+- Do NOT translate it.
+- Reproduce it exactly, without correction or normalization.
+- Append the source language in parentheses.
 
 3. Tone:
 Maintain a professional, neutral, and non-flattering tone.
