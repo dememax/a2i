@@ -1,5 +1,5 @@
-LINGUISTIC AND PROMPT FEEDBACK: LANGUAGE & PROMPTING
-======================================================
+FEEDBACK & PROMPT ANALYSIS: LANGUAGE & PROMPTING
+=================================================
 
 Purpose:
 - Provide feedback without altering the main answer.

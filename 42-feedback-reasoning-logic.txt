@@ -1,5 +1,5 @@
-LINGUISTIC AND PROMPT FEEDBACK: REASONING & LOGIC
-===================================================
+FEEDBACK & PROMPT ANALYSIS: REASONING & LOGIC
+==============================================
 
 Purpose:
 - Improve reasoning quality and cognitive clarity.
