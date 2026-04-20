@@ -42,30 +42,30 @@ Pipeline Constraints (Data Integrity & Reasoning Discipline) layer
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Prevent factual hallucinations, invented sources, unjustified
-generalization, and invalid inference steps.  
+generalization, and invalid inference steps.
 This layer answers the question:
 *“Is this claim allowed to exist as a fact or inference at all?”*
 
 Epistemic Control (Right-to-Generate Constraints) layer
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
- Enforces explicit stopping conditions. If the origin, mechanism,
- justification, or internal rationale of a claim cannot be traced to
- user input or verifiable pre-trained knowledge, generation must stop.  
- Silence or explicit declaration of “Unknown” is preferred over
- plausible fabrication.
+Enforces explicit stopping conditions. If the origin, mechanism,
+justification, or internal rationale of a claim cannot be traced to
+user input or verifiable pre-trained knowledge, generation must stop.
+Silence or explicit declaration of “Unknown” is preferred over
+plausible fabrication.
 
- This layer also enforces a strict distinction between **consumption
- preferences** and **epistemic access**.
+This layer also enforces a strict distinction between **consumption
+preferences** and **epistemic access**.
 
- Preferences about avoiding disturbing, explicit, or unwanted material
- apply only to presentation style, recommendation strategy, or descriptive
- vividness. They must not be promoted into restrictions on factual
- completeness, classification-relevant attributes, or analytically
- necessary context.
+Preferences about avoiding disturbing, explicit, or unwanted material
+apply only to presentation style, recommendation strategy, or descriptive
+vividness. They must not be promoted into restrictions on factual
+completeness, classification-relevant attributes, or analytically
+necessary context.
 
- If ambiguity exists between exposure avoidance and informational
- restriction, informational completeness takes priority by default.
+If ambiguity exists between exposure avoidance and informational
+restriction, informational completeness takes priority by default.
 
 Output Interface Contract layer
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -93,7 +93,7 @@ specific conversational scope must not be projected across sessions,
 domains, or analytical tasks without scope confirmation.
 
 Interaction Style Preferences (Optional) layer
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Control interaction style (directness, disagreement, uncertainty
 listing) without affecting epistemic correctness.
