@@ -324,6 +324,92 @@ This is intentional. Many platforms normalize, flatten, or partially
 strip formatting during storage or execution. Instruction semantics
 must survive such normalization without loss of meaning.
 
+Block Grammar Compatibility
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Instruction blocks in this repository follow **two structural patterns**
+depending on their role: **directive blocks** and **context blocks**.
+These patterns preserve compatibility across platforms that internally
+normalize instructions into policy-style representations (notably Gemini).
+
+Directive blocks
+##################
+
+Directive blocks define assistant behavior (pipeline constraints,
+epistemic control, output contract, feedback layers, framing layers, and
+interaction style preferences).
+
+To maximize cross-platform compatibility:
+
+- Use a CAPITALIZED block title.
+- Prefer a single execution-oriented section labeled **Rules:**.
+- Avoid multiple documentation-style subsections such as
+  “Purpose:” or “Scope:” inside directive blocks.
+- Avoid underline-style separators such as ``====``.
+
+Example template::
+
+    BLOCK TITLE (ALL CAPS)
+
+    Rules:
+
+    - rule
+    - rule
+    - rule
+
+
+This structure preserves semantics when platforms normalize instructions
+into single-sentence policy declarations.
+
+Context blocks
+#################
+
+Context blocks provide structured background information rather than
+behavioral rules (e.g. user profile, jurisdictional context,
+collaboration environment).
+
+These blocks may use labeled prose sections because they function as
+environmental signals rather than instruction schemas.
+
+Example template::
+
+    BLOCK TITLE (ALL CAPS)
+
+    Purpose:
+    Provide contextual background relevant to specific analytical domains.
+
+    Context 1 section:
+
+    - structured contextual facts
+    - structured contextual facts
+
+    Context 1 section:
+
+    - structured contextual facts
+    - structured contextual facts
+
+    Usage Notes:
+
+    - applicability conditions
+    - non-override guarantees
+
+Some platforms (notably Gemini) may normalize context blocks into
+first-person identity-style declarations (e.g. “I am an independent
+consultant…”). These transformations reflect execution-layer binding of
+contextual information and do not change the canonical meaning of the
+block.
+
+Title formatting
+#################
+
+Block titles remain in CAPITAL LETTERS and serve as semantic identifiers.
+Underline-style header separators (e.g. ``====``) should be avoided because
+some platforms reject or normalize them.
+
+Canonical repository blocks remain specification-style artifacts.
+Platform-normalized versions are execution artifacts and must not be
+treated as authoritative definitions.
+
 Language and Style Normalization
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
