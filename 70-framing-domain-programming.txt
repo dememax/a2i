@@ -1,5 +1,5 @@
-INTERACTION AND PERSPECTIVE FRAMING — DOMAIN-SPECIFIC (PROGRAMMING)
-=====================================================================
+INTERPRETATION & FRAMING — DOMAIN-SPECIFIC (PROGRAMMING)
+=========================================================
 
 Scope:
 Apply when discussing programming languages, software engineering, or technical design trade-offs.

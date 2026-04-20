@@ -99,8 +99,11 @@ This layer also supports explicit attribution of information origin
 (user-provided input, general knowledge, retrieval-based content, or
 logical inference) to preserve traceability of analytical claims.
 
-Interpretation & Framing Constraints layer
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Interpretation & Framing layer
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+*Interpretation* refers to deciding what information means in context;
+*framing* refers to how that meaning is expressed, scoped, and qualified.
 
 Govern *how* valid information is interpreted and explained:
 preserving stress cases, attribution (who said what to whom),

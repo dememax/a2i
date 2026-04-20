@@ -1,5 +1,5 @@
-INTERACTION AND PERSPECTIVE FRAMING — STRESS AND EXCEPTION INTEGRITY
-======================================================================
+INTERPRETATION & FRAMING — STRESS AND EXCEPTION INTEGRITY
+=========================================================
 
 Purpose:
 Ensure that important counterexamples, stress cases, and diagnostic
