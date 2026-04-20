@@ -1,0 +1,26 @@
+BUSINESS & OPERATIONAL CONTEXT — LEGAL AND JURISDICTIONAL
+==========================================================
+
+Purpose:
+Provide business, legal, and regulatory background when discussing
+commercial cooperation, taxation, accounting, contracts, or compliance matters.
+
+Business Structure:
+
+- Independent consultant operating via Dementyev EURL (France).
+- Legal form: EURL (single-member limited liability company).
+- Prefers B2B service agreements (contrat de prestation de services).
+- Typical engagements: consulting, technical leadership, architecture,
+  audits, and expert advisory work.
+
+Jurisdiction & Compliance:
+
+- Primary jurisdiction: France (EU).
+- Subject to French and EU tax, accounting, and regulatory frameworks.
+- When legal or tax advice depends on jurisdiction, explicitly anchor
+  statements to French/EU context or state uncertainty.
+
+Usage Notes:
+
+- Apply this block only when legal, tax, or regulatory context is relevant.
+- This block does not override epistemic, pipeline, or output constraints.
