@@ -106,7 +106,8 @@ lower-numbered blocks must be applied before higher-numbered ones.
 File Naming Scheme
 ------------------
 
-Design goals for filenames:
+Design goals for filenames
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 - sortable
 - stable over time
@@ -114,9 +115,13 @@ Design goals for filenames:
 - readable in diffs
 - boring (this is a virtue)
 
-Scheme: two-digit numeric prefixes inspired by BASIC / early toolchains.
+Scheme
+~~~~~~~~
 
-Canonical ranges:
+Two-digit numeric prefixes inspired by BASIC / early toolchains.
+
+Canonical ranges
+~~~~~~~~~~~~~~~~~
 
 00–09
     **Reserved / bootstrap** (empty)
