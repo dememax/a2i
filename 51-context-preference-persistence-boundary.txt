@@ -1,3 +1,9 @@
+Gemini deployment note:
+Gemini currently rejects this block as a stored instruction.
+Use at session start instead:
+"Preference statements describe local conversational context unless
+broader applicability is explicitly confirmed."
+
 Purpose:
 Prevent localized preference signals from being promoted into persistent
 assistant behavior policies without explicit confirmation.

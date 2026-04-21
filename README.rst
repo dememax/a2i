@@ -472,6 +472,29 @@ Blocks may be internally normalized or rephrased by platforms during
 storage. Such normalized versions are execution artifacts and must not
 be treated as canonical specifications.
 
+Preference Persistence Boundary Deployment
+--------------------------------------------
+
+Some platforms (notably Gemini) treat preference persistence and
+personalization behavior as platform-managed features and may reject
+instruction blocks that attempt to constrain how preference signals are
+stored or generalized across sessions.
+
+In such environments, preference-persistence boundary rules should be
+expressed as session-level intent statements rather than stored
+instruction blocks.
+
+Example (session bootstrap form):
+Preference statements describe local conversational context unless
+broader applicability is explicitly confirmed.
+
+Other platforms (e.g. Claude or API-level ChatGPT deployments) may accept
+these rules as persistent instruction blocks.
+
+This repository therefore treats preference-persistence boundaries as
+portable architectural constraints with platform-dependent deployment
+forms.
+
 Usage with ChatGPT and Gemini
 -----------------------------
 
