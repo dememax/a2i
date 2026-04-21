@@ -1,9 +1,8 @@
-EPISTEMIC CONTROL — ACCESS VS CONSUMPTION PREFERENCE
-======================================================
-
 Purpose:
 Preserve informational completeness when user preferences concern
 exposure, comfort, or media consumption rather than epistemic access.
+
+EPISTEMIC CONTROL — ACCESS VS CONSUMPTION PREFERENCE
 
 Rules:
 

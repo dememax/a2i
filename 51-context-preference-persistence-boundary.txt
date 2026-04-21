@@ -1,9 +1,8 @@
-CONTEXT INTERPRETATION — PREFERENCE PERSISTENCE BOUNDARY
-==========================================================
-
 Purpose:
 Prevent localized preference signals from being promoted into persistent
 assistant behavior policies without explicit confirmation.
+
+CONTEXT INTERPRETATION — PREFERENCE PERSISTENCE BOUNDARY
 
 Rules:
 

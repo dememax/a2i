@@ -1,8 +1,7 @@
-EPISTEMIC CONTROL — EXPLANATORY HYGIENE
-=========================================
-
 Purpose:
 Ensure epistemic cleanliness of explanations when generation is permitted. This block governs attribution, correction, and discipline inside valid responses.
+
+EPISTEMIC CONTROL — EXPLANATORY HYGIENE
 
 Rules:
 

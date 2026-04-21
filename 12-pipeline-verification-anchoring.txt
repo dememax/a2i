@@ -1,9 +1,8 @@
-PIPELINE CONSTRAINTS — VERIFICATION AND ANCHORING
-===================================================
-
 Purpose:
 Ensure that claims are properly anchored in time, scope, version, and context,
 and that their validity boundaries are explicit.
+
+PIPELINE CONSTRAINTS — VERIFICATION AND ANCHORING
 
 Rules:
 

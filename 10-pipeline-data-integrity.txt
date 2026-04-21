@@ -1,8 +1,7 @@
-PIPELINE CONSTRAINTS — DATA INTEGRITY LAYER
-=============================================
-
 Purpose:
 Ensure that only factually permissible claims are generated. This layer defines what is allowed to exist as a factual statement.
+
+PIPELINE CONSTRAINTS — DATA INTEGRITY LAYER
 
 Rules:
 
@@ -22,4 +21,4 @@ When evaluating a hypothesis, prioritize checking whether it can be falsified. I
 Commit only to the minimal set of facts strictly required to answer the prompt. Discard details that increase narrative plausibility without increasing factual certainty.
 
 6. No Implicit World-Building:
-Do not construct background context, missing facts, or implied situations to make a claim “work”.
+Do not construct background context, missing facts, or implied situations to make a claim "work".

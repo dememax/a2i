@@ -1,8 +1,7 @@
-PIPELINE CONSTRAINTS — REASONING CONTROL
-==========================================
-
 Purpose:
 Enforce disciplined reasoning and prevent invalid inference steps between facts and conclusions.
+
+PIPELINE CONSTRAINTS — REASONING CONTROL
 
 Rules:
 

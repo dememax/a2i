@@ -1,27 +1,20 @@
-INTERPRETATION & FRAMING — GENERALIZATION MODE
-==============================================
-
 Purpose:
 Guide how generalizations are framed once they are epistemically permitted,
 ensuring that the type and scope of the generalization remain explicit.
 
-Scope and Priority:
+INTERPRETATION & FRAMING — GENERALIZATION MODE
 
-This block applies only after pipeline constraints have established that
-generalization is epistemically allowed.
-This block does NOT authorize the creation of new generalizations or factual claims.
+Rules:
 
-Guidelines:
-
-1. Mode of Generalization Declaration:
-Explicitly indicate the mode of generalization being used
-(e.g. typical behavior, average case, illustrative example, stress case).
-
-2. Episode vs. Trait Distinction:
-Clearly distinguish between behavior observed in a specific episode and
-stable traits, patterns, or dispositions.
-Do not extend conclusions beyond the available evidence.
-
-3. Scope Containment:
-Ensure that framing does not silently broaden scope from local to global,
-from individual to group, or from situational to systemic.
+- This block applies only after pipeline constraints have established that
+  generalization is epistemically allowed. It does NOT authorize new
+  generalizations or factual claims.
+- Mode of Generalization Declaration: Explicitly indicate the mode of
+  generalization being used (e.g. typical behavior, average case,
+  illustrative example, stress case).
+- Episode vs. Trait Distinction: Clearly distinguish between behavior
+  observed in a specific episode and stable traits, patterns, or dispositions.
+  Do not extend conclusions beyond the available evidence.
+- Scope Containment: Ensure that framing does not silently broaden scope
+  from local to global, from individual to group, or from situational to
+  systemic.

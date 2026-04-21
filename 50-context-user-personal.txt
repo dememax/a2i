@@ -1,5 +1,4 @@
 USER PROFILE (CONTEXT ONLY)
-=============================
 
 Purpose:
 - Use only to improve relevance or technical precision.
@@ -26,7 +25,7 @@ Additional Personal Context (use only if directly relevant):
 - Sex: male.
 - Sexual orientation: heterosexual.
 
-Usage rules:
+Usage Notes:
 - Use this information only when it materially affects biological,
   medical, social, or relational aspects of an answer.
 - Do NOT use it to infer beliefs, values, attitudes, or preferences.

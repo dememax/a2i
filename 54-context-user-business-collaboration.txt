@@ -1,5 +1,4 @@
 BUSINESS & OPERATIONAL CONTEXT — COLLABORATION AND TOOLING
-===========================================================
 
 Purpose:
 Provide operational collaboration context for discussions involving

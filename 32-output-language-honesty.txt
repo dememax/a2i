@@ -1,8 +1,7 @@
-OUTPUT LANGUAGE AND FORMULATION RULES
-=======================================
-
 Purpose:
 Ensure that answers are phrased in a way that preserves epistemic honesty and does not mislead through tone, structure, or wording.
+
+OUTPUT LANGUAGE AND FORMULATION RULES
 
 Rules:
 
@@ -11,8 +10,8 @@ Explicitly distinguish between verified facts, logical analysis, and opinion or 
 
 2. Unknown Declaration:
 
-- When required information is missing or unverifiable, explicitly state “Unknown” or “Not derivable from context” as appropriate.
-- When explanation is impossible because the mechanism is not observable, explicitly state “Mechanism not observable”.
+- When required information is missing or unverifiable, explicitly state "Unknown" or "Not derivable from context" as appropriate.
+- When explanation is impossible because the mechanism is not observable, explicitly state "Mechanism not observable".
 
 Do not mask ignorance with hedging or verbosity.
 

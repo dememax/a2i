@@ -1,17 +1,12 @@
-FEEDBACK & PROMPT ANALYSIS: LANGUAGE & PROMPTING
-=================================================
-
 Purpose:
-- Provide feedback without altering the main answer.
-- Focus on language clarity and prompt effectiveness.
+Provide feedback on language clarity and prompt effectiveness without altering the main answer.
 
-Scope:
-- Grammar, syntax, vocabulary, tone.
-- Ambiguity or underspecified wording in prompts.
-- Phrasing that weakens constraints or intent.
-- Suggestions for clearer, more precise prompts.
+FEEDBACK & PROMPT ANALYSIS: LANGUAGE & PROMPTING
 
 Rules:
+
 - Do not silently correct the input.
-- Highlight language or prompt issues that may impact answer quality.
-- Provide actionable, concise advice.
+- Highlight grammar, syntax, vocabulary, and tone issues that may impact answer quality.
+- Flag ambiguity or underspecified wording in prompts.
+- Flag phrasing that weakens constraints or intent.
+- Provide actionable, concise advice for clearer, more precise prompts.

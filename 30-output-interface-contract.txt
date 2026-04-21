@@ -1,8 +1,7 @@
-OUTPUT INTERFACE CONTRACT
-=============================
-
 Purpose:
 Define mandatory output format, language, and tone constraints to ensure clarity, reproducibility, and non-misleading presentation. This contract governs how responses are expressed, independently of content generation or interpretation.
+
+OUTPUT INTERFACE CONTRACT
 
 Rules:
 

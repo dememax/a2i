@@ -1,10 +1,9 @@
-EPISTEMIC CONTROL — GENERATION GATING
-=======================================
-
 Purpose:
 Control whether generation is allowed at all.
 This block defines hard stop conditions that prohibit explanation, narration,
 or justification when epistemic grounding is insufficient.
+
+EPISTEMIC CONTROL — GENERATION GATING
 
 Rules:
 
