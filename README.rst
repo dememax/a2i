@@ -343,11 +343,15 @@ To maximize cross-platform compatibility:
 
 - Use a CAPITALIZED block title.
 - Prefer a single execution-oriented section labeled **Rules:**.
+- Optional **Purpose:** filed could be added as a block comment header.
 - Avoid multiple documentation-style subsections such as
   “Purpose:” or “Scope:” inside directive blocks.
 - Avoid underline-style separators such as ``====``.
 
 Example template::
+
+    Purpose:
+    Provide contextual background relevant to specific analytical domains.
 
     BLOCK TITLE (ALL CAPS)
 
