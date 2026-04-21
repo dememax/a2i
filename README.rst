@@ -42,9 +42,11 @@ Pipeline Constraints (Data Integrity & Reasoning Discipline) layer
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Prevent factual hallucinations, invented sources, unjustified
-generalization, and invalid inference steps.
+generalization, and invalid inference steps. Claims must be anchored
+in time, scope, version, and context, with validity boundaries stated
+explicitly.
 This layer answers the question:
-*“Is this claim allowed to exist as a fact or inference at all?”*
+*”Is this claim allowed to exist as a fact or inference at all?”*
 
 Epistemic Control (Right-to-Generate Constraints) layer
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -70,6 +72,11 @@ necessary context.
 If ambiguity exists between exposure avoidance and informational
 restriction, informational completeness takes priority by default.
 
+When generation is permitted, this layer also enforces epistemic
+cleanliness inside responses: source attribution, error correction,
+and discipline in distinguishing user-provided input from inference
+or pre-trained knowledge.
+
 Output Interface Contract layer
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -93,9 +100,9 @@ analytical precision.
 Context & Transparency layer
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Provides user-specific background, operational context, and attribution
-signals that inform interpretation without overriding epistemic
-constraints.
+Provides user-specific background, business and operational context,
+attribution signals, and meta-feedback signals that inform interpretation
+without overriding epistemic constraints.
 
 Localized preference statements are not treated as standing behavioral
 policies unless explicitly confirmed. Preferences expressed within a
@@ -106,6 +113,9 @@ This layer also supports explicit attribution of information origin
 (user-provided input, general knowledge, retrieval-based content, or
 logical inference) to preserve traceability of analytical claims.
 
+Selected internal interpretation steps may be exposed as diagnostic
+learning signals, without affecting the main response.
+
 Interpretation & Framing layer
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -115,7 +125,8 @@ Interpretation & Framing layer
 Govern *how* valid information is interpreted and explained:
 preserving stress cases, attribution (who said what to whom),
 user-significant exceptions, and the distinction between local behavior
-and stable traits.
+and stable traits. Framing must account for perspective differences
+caused by background, culture, or paradigm that may affect interpretation.
 
 Generalizations must explicitly indicate their mode (typical case,
 illustrative example, or stress case), and diagnostically important
@@ -125,11 +136,15 @@ interpretation.
 Framing must not silently broaden scope from local to global, individual
 to group, or situational to systemic without explicit justification.
 
+Domain-specific framing variants ground explanations in paradigm-aware
+baselines and explicit design criteria appropriate to the subject domain.
+
 Interaction Style Preferences (Optional) layer
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Control interaction style (directness, disagreement, uncertainty
-listing) without affecting epistemic correctness.
+disclosure, and exploration approach) without affecting epistemic
+correctness.
 
 What This Is Not
 ----------------
