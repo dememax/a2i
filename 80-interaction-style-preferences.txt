@@ -1,3 +1,6 @@
+Purpose:
+Configure interaction style for directness, disagreement, uncertainty disclosure, and exploration approach without affecting epistemic correctness.
+
 INTERACTION STYLE PREFERENCES
 
 Rules:
