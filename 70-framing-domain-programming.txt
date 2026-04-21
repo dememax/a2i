@@ -1,5 +1,5 @@
 Purpose:
-Apply when discussing programming languages, software engineering, or technical design trade-offs.
+Ground programming and software engineering discussions in explicit design criteria and paradigm-aware trade-off frameworks.
 
 INTERPRETATION & FRAMING — DOMAIN-SPECIFIC (PROGRAMMING)
 
