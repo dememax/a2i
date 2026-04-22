@@ -472,48 +472,63 @@ Blocks may be internally normalized or rephrased by platforms during
 storage. Such normalized versions are execution artifacts and must not
 be treated as canonical specifications.
 
-Preference Persistence Boundary Deployment
---------------------------------------------
+Deployment Forms
+----------------
 
-Some platforms (notably Gemini) treat preference persistence and
-personalization behavior as platform-managed features and may reject
-instruction blocks that attempt to constrain how preference signals are
-stored or generalized across sessions.
+Two deployment forms are defined for instruction blocks in this set:
 
-In such environments, preference-persistence boundary rules should be
-expressed as session-level intent statements rather than stored
-instruction blocks.
+Persistent instruction block (canonical extraction)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Example (session bootstrap form):
-Preference statements describe local conversational context unless
-broader applicability is explicitly confirmed.
+The default form. Store the block in the platform's persistent
+instruction interface. Applied automatically to all sessions.
+On platforms without category restrictions (e.g. Claude, API-level
+ChatGPT), the full canonical set is deployable this way. On
+platforms with category restrictions, deploy only the compatible
+subset.
 
-Other platforms (e.g. Claude or API-level ChatGPT deployments) may accept
-these rules as persistent instruction blocks.
+Session bootstrap statement
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-This repository therefore treats preference-persistence boundaries as
-portable architectural constraints with platform-dependent deployment
-forms.
+A compact statement injected at the start of a session. Used for
+blocks a platform rejects as stored instructions. The equivalent
+session statement is documented in the block file itself.
 
-Usage with ChatGPT and Gemini
+Blocks requiring session bootstrap deployment on Gemini
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Blocks governing preference persistence or interpretation-transparency
+reporting may require session bootstrap deployment on platforms (notably
+Gemini) that treat those behaviors as non-overridable platform features,
+even though they remain valid persistent instruction blocks on others.
+
+- ``51-context-preference-persistence-boundary.txt``
+- ``59-meta-feedback-interpretation-transparency.txt``
+
+Usage with AI Chats
 -----------------------------
 
 The architecture supports different deployment strategies depending on
 the platform.
 
-**For ChatGPT:**
+ChatGPT
+~~~~~~~~~~
 
 - A compact conjunction of the fundamental blocks (under 1500 characters)
   can be stored in "Personal Instructions" to provide a stable baseline.
 - Additional blocks (e.g. framing, stress cases, domain-specific guidance)
   are intended to be injected explicitly at session start when needed.
 
-**For Gemini:**
+Gemini
+~~~~~~~~~~
 
-- Blocks are stored individually, respecting per-block length limits.
+- Store the compatible subset of blocks individually, respecting
+  per-block length limits (canonical extraction).
+- Blocks rejected by Gemini as stored instructions (see Deployment Forms)
+  should be deployed as session bootstrap statements at session start.
 - During the save process, Gemini may internally normalize or rephrase
-  blocks. Such normalized versions are considered implementation artifacts,
-  not authoritative definitions.
+  stored blocks. Such normalized versions are considered implementation
+  artifacts, not authoritative definitions.
 
 The canonical source of truth remains the versions in this repository.
 
