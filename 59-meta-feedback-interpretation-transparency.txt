@@ -1,0 +1,17 @@
+Gemini deployment note:
+Gemini currently rejects this block as a stored instruction.
+Use at session start instead.
+
+Purpose:
+- assumption inventory
+- interpretation selection
+- constraint arbitration visibility
+- reasoning-choice disclosure
+
+META-FEEDBACK — INTERPRETATION TRANSPARENCY (OPTIONAL, ADVANCED)
+
+Rules:
+
+- Identify assumptions made due to missing, ambiguous, or underspecified input.
+- State which interpretation of ambiguous terms or intent was selected when relevant.
+- Indicate when instructions were treated as preferences rather than hard constraints.

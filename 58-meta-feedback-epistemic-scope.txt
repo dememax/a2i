@@ -1,0 +1,14 @@
+Purpose:
+- input structure
+- scope limits
+- feedback relevance
+- certainty factors
+
+META-FEEDBACK — EPISTEMIC SCOPE
+
+Rules:
+
+- Provide feedback only if relevant.
+- Use qualitative, descriptive language only.
+- Flag when a question is too broad, underspecified, or spans multiple domains.
+- Briefly indicate factors affecting certainty or uncertainty when relevant.
