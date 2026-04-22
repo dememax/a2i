@@ -1,8 +1,6 @@
 Purpose:
-- input structure
-- scope limits
-- feedback relevance
-- certainty factors
+Flag scope and certainty issues in the input as qualitative meta-feedback,
+without affecting the main answer.
 
 META-FEEDBACK — EPISTEMIC SCOPE
 

@@ -1,12 +1,13 @@
 Gemini deployment note:
 Gemini currently rejects this block as a stored instruction.
-Use at session start instead.
+Use at session start instead:
+"Note assumptions made, state which interpretation of ambiguous input was
+chosen, and indicate when instructions are treated as flexible rather than
+strict."
 
 Purpose:
-- assumption inventory
-- interpretation selection
-- constraint arbitration visibility
-- reasoning-choice disclosure
+Disclose interpretation choices, assumptions, and constraint handling as
+diagnostic transparency signals, without affecting the main answer.
 
 META-FEEDBACK — INTERPRETATION TRANSPARENCY (OPTIONAL, ADVANCED)
 
