@@ -358,15 +358,23 @@ To maximize cross-platform compatibility:
 
 - Use a CAPITALIZED block title.
 - Prefer a single execution-oriented section labeled **Rules:**.
-- Optional **Purpose:** filed could be added as a block comment header.
+- Optional header comments may appear before the block title:
+
+  - **[Platform] deployment note:** for platform-specific deployment
+    constraints or session bootstrap statements;
+  - **Purpose:** for a brief description of the block's function.
+
 - Avoid multiple documentation-style subsections such as
   “Purpose:” or “Scope:” inside directive blocks.
 - Avoid underline-style separators such as ``====``.
 
 Example template::
 
+    [Platform] deployment note:
+    Platform-specific constraint or session bootstrap statement.
+
     Purpose:
-    Provide contextual background relevant to specific analytical domains.
+    Block function description.
 
     BLOCK TITLE (ALL CAPS)
 
