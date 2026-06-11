@@ -35,8 +35,10 @@ Design Principles
 The architecture is intentionally layered. Each layer protects against
 a different class of failure and has a clearly defined responsibility.
 
-These layers are orthogonal. They do not duplicate each other and must not
-be collapsed into a single rule set.
+These layers are orthogonal in responsibility. They do not duplicate each
+other and must not be collapsed into a single rule set. Orthogonality does
+not imply full independence: some layers produce more targeted output when
+data from other layers is available. See *Layer Dependencies* below.
 
 Pipeline Constraints (Data Integrity & Reasoning Discipline) layer
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -145,6 +147,49 @@ Interaction Style Preferences (Optional) layer
 Control interaction style (directness, disagreement, uncertainty
 disclosure, and exploration approach) without affecting epistemic
 correctness.
+
+Layer Dependencies
+------------------
+
+Layers are orthogonal in responsibility but not fully independent in
+precision. Some higher-numbered blocks degrade gracefully when context
+from lower-numbered blocks is absent: they remain valid but produce less
+targeted output.
+
+Feedback layer (40-49) depends on Context layer (50-59)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Several feedback blocks use data from the Context & Transparency layer
+to calibrate their output. When the context layer is absent or
+incomplete, these blocks fall back to generic behavior.
+
+Language calibration (40):
+  The L1 interference rule requires the user's native language from
+  ``50-context-user-personal``. Without it, language feedback cannot
+  distinguish native-language transfer errors from general grammar
+  mistakes.
+
+  Without context: "missing article before 'result'."
+  With context (native Russian): "missing article before 'result' —
+  typical L1 transfer from Russian, which has no articles."
+
+Repeated-pattern detection (42):
+  Identifying patterns in the user's reasoning requires a persistent
+  user profile. Without it, only within-session patterns can be flagged.
+
+  Without context: "you used an XY framing in this question."
+  With context: "this is a recurring pattern — you frequently frame
+  infrastructure questions as implementation choices."
+
+Interpretation transparency (59):
+  Disclosing assumptions is better scoped when the user's domain
+  expertise is known. Without a profile, disclosures default to a
+  generic-audience level.
+
+  Without context: "I assumed standard memory management applies here."
+  With context (senior C++ developer): "I assumed RAII and unique
+  ownership — confirm if the type has shared or weak ownership
+  semantics."
 
 What This Is Not
 ----------------
