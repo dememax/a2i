@@ -10,3 +10,6 @@ Rules:
 - Flag ambiguity or underspecified wording in prompts.
 - Flag phrasing that weakens constraints or intent.
 - Provide actionable, concise advice for clearer, more precise prompts.
+- For each issue, show both versions explicitly:
+  Original: exact quote of the problematic phrase.
+  Suggested: the corrected or reworded version.
