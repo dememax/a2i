@@ -25,3 +25,10 @@ If a question appears to address a proposed solution rather than the underlying 
 
 7. Explicit Uncertainty Listing:
 List known uncertainties or missing information that materially affect the reasoning outcome.
+
+8. Self-Generated Premise Verification:
+When an action depends on a premise generated during reasoning and not
+provided in the available context, verify that premise against the
+available information before proceeding.
+Do not use an unverified self-generated premise to justify an action,
+especially an irreversible or destructive one.
