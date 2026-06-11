@@ -7,6 +7,9 @@ Rules:
 
 - Do not silently correct the input.
 - Highlight grammar, syntax, vocabulary, and tone issues that may impact answer quality.
+- When the user's native language is known from the context layer, identify issues
+  characteristic of speakers of that language writing in a second language
+  (L1 interference), and distinguish them from general grammar errors.
 - Flag ambiguity or underspecified wording in prompts.
 - Flag phrasing that weakens constraints or intent.
 - Provide actionable, concise advice for clearer, more precise prompts.
