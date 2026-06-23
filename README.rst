@@ -31,9 +31,47 @@ This instruction set is intended for advanced analytical use cases:
 dialogue analysis, linguistic discussion, social dynamics, reasoning audits,
 and reflective or adversarial conversations.
 
-*******************
+******************
+What This Is Not
+******************
+
+This project is **not**:
+
+- a prompt optimization trick
+- a tone or politeness filter
+- a conversational alignment framework
+- a replacement for fact-checking tools
+- an attempt to model internal AI mechanisms
+
+It deliberately avoids post-hoc rationalizations such as references to
+"internal weights", "conflict resolution modules", or hidden system prompts.
+If something cannot be grounded, it must not be explained.
+
+********************
+Intended Use Cases
+********************
+
+- Analysis of real chat logs or conversations
+- Linguistic and pragmatic discussions
+- Reasoning and argument audits
+- Social or group dynamics analysis
+- Expert-level exploratory dialogue
+- Situations where "true but misleading" is considered a failure
+
+This instruction set is especially useful when:
+
+- over-generalization is dangerous,
+- rare or stressful counterexamples matter,
+- attribution and perspective are critical,
+- or the cost of a confident hallucination is high.
+
+**************
+Architecture
+**************
+
+===================
 Design Principles
-*******************
+===================
 
 The architecture is intentionally layered. Each layer protects against
 a different class of failure and has a clearly defined responsibility.
@@ -43,20 +81,20 @@ other and must not be collapsed into a single rule set. Orthogonality does
 not imply full independence: some layers produce more targeted output when
 data from other layers is available. See *Layer Dependencies* below.
 
-====================================================================
+--------------------------------------------------------------------
 Pipeline Constraints (Data Integrity & Reasoning Discipline) layer
-====================================================================
+--------------------------------------------------------------------
 
 Prevent factual hallucinations, invented sources, unjustified
 generalization, and invalid inference steps. Claims must be anchored
 in time, scope, version, and context, with validity boundaries stated
 explicitly.
 This layer answers the question:
-*”Is this claim allowed to exist as a fact or inference at all?”*
+*"Is this claim allowed to exist as a fact or inference at all?"*
 
-=========================================================
+---------------------------------------------------------
 Epistemic Control (Right-to-Generate Constraints) layer
-=========================================================
+---------------------------------------------------------
 
 Enforces explicit stopping conditions.
 
@@ -64,8 +102,8 @@ If the origin, mechanism, justification, internal rationale, or decision
 path of a claim cannot be traced to user input or verifiable pre-trained
 knowledge, generation must stop.
 
-Silence or explicit declaration of non-derivability (e.g. “Unknown” or
-“Mechanism not observable”) is preferred over plausible fabrication.
+Silence or explicit declaration of non-derivability (e.g. "Unknown" or
+"Mechanism not observable") is preferred over plausible fabrication.
 
 This layer also enforces a strict distinction between **consumption
 preferences** and **epistemic access**.
@@ -84,31 +122,31 @@ cleanliness inside responses: source attribution, error correction,
 and discipline in distinguishing user-provided input from inference
 or pre-trained knowledge.
 
-=================================
+---------------------------------
 Output Interface Contract layer
-=================================
+---------------------------------
 
 Governs *how* responses are expressed: language, tone, terminology,
 and structural clarity. This layer ensures that even correct content
 is not presented in a misleading or manipulative way.
 
 This layer defines the canonical surface formulation for uncertainty
-declarations (e.g. “Unknown” or “Not derivable from context”), allowing
+declarations (e.g. "Unknown" or "Not derivable from context"), allowing
 pipeline and epistemic-control layers to enforce stopping conditions
 without prescribing output wording.
 
-==================================
+----------------------------------
 Feedback & Prompt Analysis layer
-==================================
+----------------------------------
 
 Provides meta-level diagnostics on the quality of user inputs and
 reasoning. Does not alter epistemic constraints but identifies
 linguistic ambiguity, logical gaps, and prompt patterns that weaken
 analytical precision.
 
-==============================
+------------------------------
 Context & Transparency layer
-==============================
+------------------------------
 
 Provides user-specific background, business and operational context,
 attribution signals, and meta-feedback signals that inform interpretation
@@ -126,9 +164,9 @@ logical inference) to preserve traceability of analytical claims.
 Selected internal interpretation steps may be exposed as diagnostic
 learning signals, without affecting the main response.
 
-================================
+--------------------------------
 Interpretation & Framing layer
-================================
+--------------------------------
 
 *Interpretation* refers to deciding what information means in context;
 *framing* refers to how that meaning is expressed, scoped, and qualified.
@@ -150,26 +188,26 @@ to group, or situational to systemic without explicit justification.
 Domain-specific framing variants ground explanations in paradigm-aware
 baselines and explicit design criteria appropriate to the subject domain.
 
-================================================
+------------------------------------------------
 Interaction Style Preferences (Optional) layer
-================================================
+------------------------------------------------
 
 Control interaction style (directness, disagreement, uncertainty
 disclosure, and exploration approach) without affecting epistemic
 correctness.
 
-********************
+--------------------
 Layer Dependencies
-********************
+--------------------
 
 Layers are orthogonal in responsibility but not fully independent in
 precision. Some higher-numbered blocks degrade gracefully when context
 from lower-numbered blocks is absent: they remain valid but produce less
 targeted output.
 
-=========================================================
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Feedback layer (40-49) depends on Context layer (50-59)
-=========================================================
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Several feedback blocks use data from the Context & Transparency layer
 to calibrate their output. When the context layer is absent or
@@ -203,43 +241,29 @@ Interpretation transparency (59):
   ownership — confirm if the type has shared or weak ownership
   semantics."
 
-******************
-What This Is Not
-******************
+====================
+AI-Agnostic Design
+====================
 
-This project is **not**:
+All instruction blocks are intentionally written to be **AI-agnostic**.
 
-- a prompt optimization trick
-- a tone or politeness filter
-- a conversational alignment framework
-- a replacement for fact-checking tools
-- an attempt to model internal AI mechanisms
+They do not rely on:
 
-It deliberately avoids post-hoc rationalizations such as references to
-“internal weights”, “conflict resolution modules”, or hidden system prompts.
-If something cannot be grounded, it must not be explained.
+- model-specific internal mechanisms,
+- references to hidden prompts or training details,
+- assumptions about tool availability or memory models.
 
-********************
-Intended Use Cases
-********************
+This allows the same instruction set to be applied, with minimal adaptation,
+to different systems (e.g. ChatGPT, Gemini, or other LLMs), while preserving
+the same epistemic guarantees.
 
-- Analysis of real chat logs or conversations
-- Linguistic and pragmatic discussions
-- Reasoning and argument audits
-- Social or group dynamics analysis
-- Expert-level exploratory dialogue
-- Situations where “true but misleading” is considered a failure
+*************************
+Repository Organization
+*************************
 
-This instruction set is especially useful when:
-
-- over-generalization is dangerous,
-- rare or stressful counterexamples matter,
-- attribution and perspective are critical,
-- or the cost of a confident hallucination is high.
-
-***********
+===========
 Structure
-***********
+===========
 
 Instructions are split into independent blocks, each stored as a separate file.
 Blocks are indexed to allow insertion of new constraints without renaming
@@ -252,13 +276,13 @@ Lower-numbered blocks define admissibility and epistemic boundaries,
 while higher-numbered blocks progressively refine interpretation,
 presentation, and interaction behavior.
 
-********************
+====================
 File Naming Scheme
-********************
+====================
 
-============================
+----------------------------
 Design goals for filenames
-============================
+----------------------------
 
 - sortable
 - stable over time
@@ -266,15 +290,15 @@ Design goals for filenames
 - readable in diffs
 - boring (this is a virtue)
 
-========
+--------
 Scheme
-========
+--------
 
 Two-digit numeric prefixes inspired by BASIC / early toolchains.
 
-==================
+------------------
 Canonical ranges
-==================
+------------------
 
 00–09
     **Reserved / bootstrap** (empty)
@@ -327,17 +351,17 @@ Numbering ranges reflect primary architectural responsibility rather than
 exclusive layer membership. Some ranges intentionally contain multiple
 closely related control layers (e.g. context and transparency).
 
-************
+============
 Versioning
-************
+============
 
 The repository maintains explicit versions of the instruction set.
 Changes should be additive where possible.
 Breaking conceptual changes require a new major version.
 
-*************************
+=========================
 Customization and Scope
-*************************
+=========================
 
 This instruction set includes optional, user-specific context blocks
 reflecting individual analytical preferences or operational background.
@@ -350,25 +374,13 @@ At present, optional blocks are provided for **Maxim Dementyev**, including:
 These blocks are strictly optional. The core architecture remains valid
 and useful without them.
 
-********************
-AI-Agnostic Design
-********************
+*****************
+Block Authoring
+*****************
 
-All instruction blocks are intentionally written to be **AI-agnostic**.
-
-They do not rely on:
-
-- model-specific internal mechanisms,
-- references to hidden prompts or training details,
-- assumptions about tool availability or memory models.
-
-This allows the same instruction set to be applied, with minimal adaptation,
-to different systems (e.g. ChatGPT, Gemini, or other LLMs), while preserving
-the same epistemic guarantees.
-
-*******************************
+===============================
 Instruction Block Constraints
-*******************************
+===============================
 
 All instruction blocks in this repository are intentionally constrained
 to maximize portability, predictability, and compatibility across
@@ -377,9 +389,9 @@ different AI platforms.
 The following constraints are **design requirements**, not incidental
 limitations.
 
-===================
+-------------------
 Block Size Limits
-===================
+-------------------
 
 - Individual instruction blocks are generally kept **at or below
   approximately 1500 characters**.
@@ -393,9 +405,9 @@ Block Size Limits
 - When blocks approach this limit, they should be split along semantic-layer
   boundaries rather than compressed through wording reduction.
 
-=======================
+-----------------------
 Formatting Discipline
-=======================
+-----------------------
 
 - Instruction blocks avoid advanced or fragile formatting.
 - Only minimal, robust constructs are used:
@@ -409,18 +421,18 @@ This is intentional. Many platforms normalize, flatten, or partially
 strip formatting during storage or execution. Instruction semantics
 must survive such normalization without loss of meaning.
 
-=============================
+-----------------------------
 Block Grammar Compatibility
-=============================
+-----------------------------
 
 Instruction blocks in this repository follow **two structural patterns**
 depending on their role: **directive blocks** and **context blocks**.
 These patterns preserve compatibility across platforms that internally
 normalize instructions into policy-style representations (notably Gemini).
 
-------------------
+^^^^^^^^^^^^^^^^^^
 Directive blocks
-------------------
+^^^^^^^^^^^^^^^^^^
 
 Directive blocks define assistant behavior (pipeline constraints,
 epistemic control, output contract, feedback layers, framing layers, and
@@ -437,7 +449,7 @@ To maximize cross-platform compatibility:
   - **Purpose:** for a brief description of the block's function.
 
 - Avoid multiple documentation-style subsections such as
-  “Purpose:” or “Scope:” inside directive blocks.
+  "Purpose:" or "Scope:" inside directive blocks.
 - Avoid underline-style separators such as ``====``.
 
 Example template::
@@ -460,9 +472,9 @@ Example template::
 This structure preserves semantics when platforms normalize instructions
 into single-sentence policy declarations.
 
-----------------
+^^^^^^^^^^^^^^^^
 Context blocks
-----------------
+^^^^^^^^^^^^^^^^
 
 Context blocks provide structured background information rather than
 behavioral rules (e.g. user profile, jurisdictional context,
@@ -494,14 +506,14 @@ Example template::
     - non-override guarantees
 
 Some platforms (notably Gemini) may normalize context blocks into
-first-person identity-style declarations (e.g. “I am an independent
-consultant…”). These transformations reflect execution-layer binding of
+first-person identity-style declarations (e.g. "I am an independent
+consultant…"). These transformations reflect execution-layer binding of
 contextual information and do not change the canonical meaning of the
 block.
 
-------------------
+^^^^^^^^^^^^^^^^^^
 Title formatting
-------------------
+^^^^^^^^^^^^^^^^^^
 
 Block titles remain in CAPITAL LETTERS and serve as semantic identifiers.
 Underline-style header separators (e.g. ``====``) should be avoided because
@@ -511,9 +523,9 @@ Canonical repository blocks remain specification-style artifacts.
 Platform-normalized versions are execution artifacts and must not be
 treated as authoritative definitions.
 
-==================================
+----------------------------------
 Language and Style Normalization
-==================================
+----------------------------------
 
 - Instruction blocks are written in **neutral, technical English**.
 - The style is optimized for **machine interpretation**, not rhetorical
@@ -528,9 +540,9 @@ is used: short sentences, active voice, and limited syntactic complexity.
 This is a stylistic discipline, not strict adherence to a controlled
 vocabulary standard.
 
-====================
+--------------------
 AI-Agnostic Intent
-====================
+--------------------
 
 These constraints ensure that instruction blocks:
 
@@ -542,9 +554,13 @@ These constraints ensure that instruction blocks:
 Together, these properties are essential for treating instructions as
 **portable architectural components**, rather than fragile prompts.
 
-**********************************************
+************
+Deployment
+************
+
+==============================================
 Model-Specific Constraints and Normalization
-**********************************************
+==============================================
 
 The instruction blocks are designed to respect known platform constraints,
 most notably:
@@ -557,15 +573,15 @@ Blocks may be internally normalized or rephrased by platforms during
 storage. Such normalized versions are execution artifacts and must not
 be treated as canonical specifications.
 
-******************
+==================
 Deployment Forms
-******************
+==================
 
 Two deployment forms are defined for instruction blocks in this set:
 
-=====================================================
+-----------------------------------------------------
 Persistent instruction block (canonical extraction)
-=====================================================
+-----------------------------------------------------
 
 The default form. Store the block in the platform's persistent
 instruction interface. Applied automatically to all sessions.
@@ -574,17 +590,17 @@ ChatGPT), the full canonical set is deployable this way. On
 platforms with category restrictions, deploy only the compatible
 subset.
 
-=============================
+-----------------------------
 Session bootstrap statement
-=============================
+-----------------------------
 
 A compact statement injected at the start of a session. Used for
 blocks a platform rejects as stored instructions. The equivalent
 session statement is documented in the block file itself.
 
-=========================================================
+---------------------------------------------------------
 Blocks requiring session bootstrap deployment on Gemini
-=========================================================
+---------------------------------------------------------
 
 Blocks governing preference persistence or interpretation-transparency
 reporting may require session bootstrap deployment on platforms (notably
@@ -594,25 +610,25 @@ even though they remain valid persistent instruction blocks on others.
 - ``51-context-preference-persistence-boundary.txt``
 - ``59-meta-feedback-interpretation-transparency.txt``
 
-*********************
+=====================
 Usage with AI Chats
-*********************
+=====================
 
 The architecture supports different deployment strategies depending on
 the platform.
 
-=========
+---------
 ChatGPT
-=========
+---------
 
 - A compact conjunction of the fundamental blocks (under 1500 characters)
   can be stored in "Personal Instructions" to provide a stable baseline.
 - Additional blocks (e.g. framing, stress cases, domain-specific guidance)
   are intended to be injected explicitly at session start when needed.
 
-========
+--------
 Gemini
-========
+--------
 
 - Store the compatible subset of blocks individually, respecting
   per-block length limits (canonical extraction).
@@ -624,9 +640,9 @@ Gemini
 
 The canonical source of truth remains the versions in this repository.
 
-********************************
+================================
 Canonical vs Normalized Blocks
-********************************
+================================
 
 Some platforms may transform, normalize, or rephrase instruction blocks
 when saving them internally.
@@ -640,3 +656,4 @@ These normalized versions:
 Canonical versions of all instruction blocks are maintained in this
 repository and should be used as the reference for comparison,
 revision, and future development.
+
